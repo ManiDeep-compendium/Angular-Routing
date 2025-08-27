@@ -4,6 +4,7 @@ import { AthleteCondition } from "./services/AthleteCondition";
 import { authGuard } from "./Guards/auth.guard";
 
 export const CriketRoutes: Routes = [
+  
   {
     path:"",
     component: CricketComponent
