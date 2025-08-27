@@ -1,0 +1,25 @@
+<h2>Cricket Club</h2>
+<nav>
+  <a routerLink="bowling/2" routerLinkActive="router-link-active">Bowling</a>
+  &nbsp;
+  &nbsp;
+  <a class="disabled-link" routerLink="batting" routerLinkActive="router-link-active">Batting</a>
+  &nbsp;
+  &nbsp;
+  <a class="disabled-link" routerLink="wicket-keeping" routerLinkActive="router-link-active">Wicket Keeping</a>
+</nav>
+
+<div>
+  <p>Athlete need to provide Educational details before Applying For training:</p>
+  <div>
+    <input placeholder="Graduation"  />
+  </div>
+  <br />
+  <div>
+    <input placeholder="Percentage"  />
+  </div>
+  <br />
+  <div>
+    <button (click)="submitDetails()">Submit</button>
+  </div>
+</div>

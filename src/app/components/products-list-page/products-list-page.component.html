@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Product No</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>
+        <a routerLink="." (click)="navigateToProduct(product.id)" >View product</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Router outlet for child routes -->
+<router-outlet></router-outlet>
