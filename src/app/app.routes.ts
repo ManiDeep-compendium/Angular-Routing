@@ -9,6 +9,8 @@ import path from 'path';
 import { Component } from '@angular/core';
 import { SportsAcademyComponent } from './components/sports-academy/sports-academy.component';
 import { CricketComponent } from './components/cricket/cricket.component';
+import { clubGuard } from './components/cricket/Guards/club.guard';
+import { adminGaurdGuard } from './components/cricket/Guards/admin-gaurd.guard';
 
 export const routes: Routes = [
   {
@@ -18,7 +20,8 @@ export const routes: Routes = [
   },
   {
     path: "sports-club",
-    component:SportsAcademyComponent
+    component:SportsAcademyComponent,
+    canMatch:[adminGaurdGuard]
   },
   {
     path: "cricket-club",
@@ -26,7 +29,8 @@ export const routes: Routes = [
     data: {
       title: "Cricket Club",
       description: "Learn about cricket, its rules, and techniques."
-    }
+    },
+    canActivateChild:[clubGuard]
   },
   {
     path:"error",
